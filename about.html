@@ -49,15 +49,23 @@
 
     <script>
         const user = {
-            name: '',
-            imageUrl: '',
-            bio: ''
+            name: 'Sierra Brookins',
+            imageUrl: 'images/cat.png',
+            bio: 'I am a 23-year-old student studying Software Development at Champlain College. ' +
+                'I\'m currently practicing HTML and CSS, JavaScript, and C++! ' +
+                'My goals are to break into Software Engineering and code a few personal projects along the way! ' +
+                'My hobbies outside of school include marketing and learning new languages. '
         };
 
         // Step one - Create a React element
+        const h1Element = React.createElement('h1', user.name);
+        const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'An image of a cat in a cardboard roll.' });
+        const paragraphElement = React.createElement('p', user.bio);
 
         // Step 2: Render the React element
-
+        ReactDOM.render(h1Element, document.getElementById('h1'));
+        ReactDOM.render(imgElement, document.getElementById('img'));
+        ReactDOM.render(paragraphElement, document.getElementById('content'));
     </script>
 
 </main><!-- /.container -->
