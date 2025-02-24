@@ -58,9 +58,9 @@
         };
 
         // Step one - Create a React element
-        const h1Element = React.createElement('h1', user.name);
+        const h1Element = React.createElement('h1', null, user.name);
         const imgElement = React.createElement('img', { src: user.imageUrl, alt: 'An image of a cat in a cardboard roll.' });
-        const paragraphElement = React.createElement('p', user.bio);
+        const paragraphElement = React.createElement('p', null, user.bio);
 
         // Step 2: Render the React element
         ReactDOM.render(h1Element, document.getElementById('h1'));
